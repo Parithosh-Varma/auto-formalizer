@@ -1,0 +1,1 @@
+[{"id":"algebra_001","problem":"Prove that the sum of the first n positive integers is n(n+1)/2.","reference_proof":"By induction on n.","difficulty":"easy"},{"id":"algebra_002","problem":"Prove that for all natural numbers a b, a + b = b + a.","reference_proof":"Induction on a.","difficulty":"easy"}]

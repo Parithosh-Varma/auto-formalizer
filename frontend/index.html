@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Neuro-Symbolic Auto-Formalizer</title><link rel="stylesheet" href="styles.css"/></head><body>
+<header><div class="logo">Σ Neuro-Symbolic Auto-Formalizer</div><div id="status" class="pill">● Ready</div></header>
+<main>
+<section class="left">
+<h2>Input</h2>
+<label>Problem<textarea id="problem" rows="4">Prove that the sum of the first n positive integers is n(n+1)/2.</textarea></label>
+<label>Reference proof<textarea id="refproof" rows="5">By induction. Base n=1 trivial. Assume true for k, then sum to k+1 = k(k+1)/2 + (k+1).</textarea></label>
+<label>Context / hints<textarea id="context" rows="2" placeholder="definitions, assumptions..."></textarea></label>
+<div class="cfg">
+<label>Max iterations <input id="maxiter" type="number" value="8" min="1" max="12"/></label>
+<label>Timeout <input id="timeout" type="number" value="30"/></label>
+<label>Temp <input id="temp" type="number" step="0.1" value="0.2"/></label>
+<label><input type="checkbox" checked/> No sorry · Must compile · Mathlib</label>
+</div>
+<div class="row"><select id="example"></select><button id="go">Formalize Proof</button></div>
+<h3>Live pipeline</h3><div id="pipeline" class="pipe"></div>
+<h3>Verification</h3><div id="verify" class="verify">—</div>
+</section>
+<section class="right">
+<h2>Lean proof</h2><pre><code id="code">—</code></pre>
+<h3>Compiler output</h3><pre id="compiler">—</pre>
+<h3>Iteration timeline</h3><div id="timeline"></div>
+</section>
+</main>
+<script src="app.js"></script></body></html>
