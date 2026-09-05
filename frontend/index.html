@@ -1,6 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Neuro-Symbolic Auto-Formalizer</title><link rel="stylesheet" href="styles.css"/></head><body>
-<header><div class="logo">Σ Neuro-Symbolic Auto-Formalizer</div><div id="status" class="pill">● Ready</div></header>
+<title>Neuro-Symbolic Auto-Formalizer</title><link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script></head><body>
+<header><div class="logo">Σ Neuro-Symbolic Auto-Formalizer</div><div class="head-right"><button id="elapsedBtn" class="pill btn" title="Elapsed time — click to toggle s / m:ss">⏱ 0.0s</button><div id="status" class="pill">● Ready</div></div></header>
 <main>
 <section class="left">
 <h2>Input</h2>
@@ -14,8 +17,10 @@
 <label><input type="checkbox" checked/> No sorry · Must compile · Mathlib</label>
 </div>
 <div class="row"><select id="example"></select><button id="go">Formalize Proof</button></div>
+<div id="loader" class="loader hidden"><span class="spinner"></span><span id="loaderText">Working…</span><span id="elapsed" class="elapsed"></span></div>
 <h3>Live pipeline</h3><div id="pipeline" class="pipe"></div>
 <h3>Verification</h3><div id="verify" class="verify">—</div>
+<h3>Math view</h3><div id="mathview" class="mathview">—</div>
 </section>
 <section class="right">
 <h2>Lean proof</h2><pre><code id="code">—</code></pre>

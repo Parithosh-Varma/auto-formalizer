@@ -16,7 +16,7 @@ store.init_db()
 app = FastAPI(title="Neuro-Symbolic Auto-Formalizer")
 JOBS: dict[str, dict] = {}
 
-FRONT = os.path.join(os.path.dirname(__file__), "../../../frontend")
+FRONT = os.path.join(os.path.dirname(__file__), "../../frontend")
 FRONT = os.path.abspath(FRONT)
 
 class FormalizeReq(BaseModel):
