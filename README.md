@@ -182,3 +182,5 @@ theorem sum_first_n (n : ℕ) :
 
 - Generated Lean is untrusted: sandboxed (no network, memory/CPU/time limits, temp dirs, cleanup, single compiler command).
 - Secrets live only in local `.env` (git-ignored) — never logged or committed.
+
+<!-- daily-2026-09-07: upkeep -->
